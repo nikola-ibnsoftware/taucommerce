@@ -1,0 +1,21 @@
+@font-face{
+    font-family: NunitoRegular;
+    src: url(../../dist/fonts/Nunito/Nunito-Regular.ttf);
+}
+@font-face{
+    font-family: NunitoBold;
+    src: url(../../dist/fonts/Nunito/Nunito-Bold.ttf);
+}
+@font-face{
+    font-family: NunitoExtraBold;
+    src: url(../../dist/fonts/Nunito/Nunito-ExtraBold.ttf);
+}
+
+body{
+    font-family: NunitoRegular;
+}
+
+.hart{
+    content: '\2665';
+
+}
