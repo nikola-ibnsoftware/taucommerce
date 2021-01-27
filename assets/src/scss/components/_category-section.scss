@@ -1,0 +1,30 @@
+.category-section{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    .category-top{
+        .category-result{
+            text-align: left;
+            color: $grey;
+            line-height: 40px;
+        }
+        .category-sort{
+            text-align: right;
+            label{
+                padding-right: 20px;
+                color: $grey;
+            }
+            select{
+                width: 174px;
+                padding: 9px 10px 9px 15px;
+                font-size: 16px;
+                color: $grey;
+                line-height: 1.3;
+                border: 1px solid $grey;
+                border-radius: 5px;
+                background: url(../../src/images/icons/sort-arrow-down.svg) no-repeat right;
+                -webkit-appearance: none;
+                background-position-x: 140px;
+            }
+        }
+    }
+}

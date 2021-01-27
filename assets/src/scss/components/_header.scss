@@ -1,5 +1,6 @@
 .header-section{
     .header-top{
+        padding: 20px 0;
         .header-logo{
             a{
                 img{
@@ -24,6 +25,9 @@
                         .nav-item{
                             .nav-link{
                                 color: $white;
+                                line-height: 1.4;
+                                padding: 0;
+                                margin: 12px 48px 12px 0;
                             }
                         }
                     }

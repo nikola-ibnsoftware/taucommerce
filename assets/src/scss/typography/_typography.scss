@@ -10,9 +10,17 @@
     font-family: NunitoExtraBold;
     src: url(../../dist/fonts/Nunito/Nunito-ExtraBold.ttf);
 }
+@media (min-width: 1200px){
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 body{
     font-family: NunitoRegular;
+    font-size: 16px;
+    color: $grey;
 }
 
 .hart{

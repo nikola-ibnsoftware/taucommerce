@@ -1,0 +1,25 @@
+.breadcrumbs-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    nav{
+        .breadcrumb{
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+
+            .breadcrumb-item{
+                &.active{
+                    color: $grey;
+                }
+                +.breadcrumb-item::before{
+                    content: '-';
+                }
+                a{
+                    color: $dark-grey;
+                    font-family: NunitoBold;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
