@@ -16,6 +16,18 @@
         padding-right: 0;
     }
 }
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    outline: none;
+    &:hover,
+    &:focus{
+        text-decoration: none;
+        outline: none;
+    }
+}
 
 body{
     font-family: NunitoRegular;

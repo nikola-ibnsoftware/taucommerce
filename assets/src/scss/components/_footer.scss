@@ -1,0 +1,75 @@
+.footer-section{
+    .footer-top{
+        padding: 56px 0;
+        .footer-box{
+            .footer-column{
+                .footer-logo{
+                    margin-bottom: 30px;
+                }
+                h3{
+                    padding-top: 21px;
+                    margin-bottom: 30px;
+                    color: $white;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    font-family: NunitoBold;
+                }
+                .footer-txt,
+                .footer-link{
+                    color: $text-footer;
+                    float: left;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .footer-link{
+                    &:hover,
+                    &:focus{
+                        color: $white;
+                        font-family: NunitoBold;
+                    }
+                }
+                .footer-social{
+                    margin-bottom: 16px;
+                    float: left;
+                    width: 100%;
+                    &:hover,
+                    &:focus{
+                        svg{
+                            fill: #fff!important;
+                            path{
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        .footer-bottom-box{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            p{
+                text-align: center;
+                color: $white;
+                font-size: 12px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .footer-scroll-up{
+        position: relative;
+        img{
+            position: absolute;
+            display: block;
+            right: 27px;
+            bottom: 56px;
+            border-radius: 50%;
+            padding: 12px;
+            background: $scroll-bg;
+        }
+    }
+}

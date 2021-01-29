@@ -9,13 +9,20 @@ $shadow-active: #13203B26;
 $line: #AAC2E1;
 $blue: #7A92F2;
 $text-footer: #D2D7DF;
+$footer-top-bg: #13203B;
 $footer-bottom-bg: #243861;
 $scroll: #C1C1C1;
-$scroll-bg: #F1F1F1;
+$scroll-bg: #7A92F2;
 
 
 
 
 .purple-bg{
     background: $purple;
+}
+.footer-top-bg{
+    background: $footer-top-bg;
+}
+.footer-bottom-bg{
+    background: $footer-bottom-bg;
 }

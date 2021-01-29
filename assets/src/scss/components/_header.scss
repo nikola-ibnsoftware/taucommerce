@@ -1,6 +1,7 @@
 .header-section{
     .header-top{
-        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
         .header-logo{
             a{
                 img{
@@ -10,8 +11,75 @@
             }
         }
         .header-txt{
-            h2{
-                font-family: NunitoBold !important;
+            .header-txt-box{
+                float: right;
+                // position: absolute;
+                // display: block;
+                // right: 15px;
+                // top: 50%;
+                // transform: translate(0, -50%);
+                .header-txt-lf{
+                    margin-right: 30px;
+                    float: left;
+                    a{
+                        color: $grey;
+                        cursor: pointer;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        float: left;
+                        &.header-reg{
+                            border-right: 1px solid $purple;
+                            padding: 5px 12px 5px 0;
+                        }
+                        &.header-log{
+                            padding: 5px 0 5px 12px;
+                        }
+                        &:hover,
+                        &:focus{
+                            opacity: 0.9;
+                        }
+                    }
+                }
+                .header-txt-rh{
+                    float: left;
+                    padding: 3px 0;
+                    .header-search{
+                        margin-right: 16px;
+                        float: left;
+                    }
+                    .header-txt-like{
+                        float: left;
+                        margin-right: 16px;
+                        display: inline;
+                        img{
+                            float: left;
+                            height: 24px;
+                            margin-right: 6px;
+                        }
+                        p{
+                            float: left;
+                            color: $purple;
+                            font-size: 18px;
+                            line-height: 1.4;
+                            font-family: NunitoBold;
+                        }
+                    }
+                    .header-txt-cart{
+                        float: left;
+                        img{
+                            float: left;
+                            height: 24px;
+                            margin-right: 6px;
+                        }
+                        p{
+                            float: left;
+                            color: purple;
+                            font-size: 18px;
+                            line-height: 1.4;
+                            font-family: NunitoBold;
+                        }
+                    }
+                }
             }
         }
     }
