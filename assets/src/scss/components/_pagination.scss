@@ -1,0 +1,90 @@
+.pagination-section{
+    nav{
+        margin: 0 auto;
+        display: block;
+        width: max-content;
+        ul{
+            li{
+                &.pag-middle{
+                    padding: 3px 15px;
+                    a{
+                        background-color: transparent;
+                        border: 0;
+                        border-bottom: 1px solid transparent;
+                        color: $grey;
+                        font-size: 16px;
+                        margin: 0 5px;
+                        padding: 0 0 4px;
+                    }
+                    &.active{
+                        a{
+                            background-color: transparent;
+                            border: 0;
+                            border-bottom: 3px solid $purple;
+                            color: $purple;
+                            font-family: NunitoBold;
+                        }
+                    }
+                }
+                &.left-arrow-pag{
+                    img{
+                        border-radius: 50%;
+                        padding: 12px;
+                        background: $scroll-bg;
+                        margin-right: 10px;
+                    }
+                }
+                &.right-arrow-pag{
+                    img{
+                        border-radius: 50%;
+                        padding: 12px;
+                        background: $scroll-bg;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .pagination-box{
+        .pagination-list{
+            .pagination-item{
+                display: inline;
+                .pagination-link{
+                    color: $grey;
+                    margin: 0 10px;
+                    padding: 0 4px;
+                    border-bottom: 3px solid transparent;
+                    &.active{
+                        color: $purple;
+                        border-bottom: 3px solid $purple;
+                        font-family: NunitoBold;
+                    }
+                }
+                &.pagination-prev{
+                    margin-right: 22px;
+                    .pagination-link{
+                        margin: 0;
+                        padding: 0;
+                        img{
+                            border-radius: 50%;
+                            padding: 12px 13px 12px 11px;
+                            background: $grey;
+                        }
+                    }
+                }
+                &.pagination-next{
+                    margin-left: 22px;
+                    .pagination-link{
+                        margin: 0;
+                        padding: 0;
+                        img{
+                            border-radius: 50%;
+                            padding: 12px 11px 12px 13px;
+                            background: $purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
