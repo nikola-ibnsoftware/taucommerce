@@ -2,10 +2,15 @@
     padding-top: 40px;
     padding-bottom: 60px;
     .category-top{
+        margin-bottom: 30px;
         .category-result{
             text-align: left;
             color: $grey;
             line-height: 40px;
+            @media (max-width: 767px){
+                text-align: center;
+                font-size: 13px;
+            }
         }
         .category-sort{
             text-align: right;
@@ -24,6 +29,256 @@
                 background: url(../../src/images/icons/sort-arrow-down.svg) no-repeat right;
                 -webkit-appearance: none;
                 background-position-x: 140px;
+            }
+            @media (max-width: 767px){
+                text-align: center;
+            }
+        }
+    }
+    .category-bottom{
+        .category-full{
+            padding-left: 0;
+            padding-right: 0;
+            .category-sidebar{
+                padding: 0;
+                margin-bottom: 30px;
+                .sidebar-inner{
+                    padding: 60px 20px;
+                    border: 1px solid rgba(92, 102, 115, 0.2);
+                    border-radius: 15px;
+                    .sidebar-box{
+                        padding-bottom: 40px;
+                        margin-bottom: 40px;
+                        border-bottom: 1px solid rgba(92, 102, 115, 0.2);
+                        &:last-child{
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                            border-bottom: 0;
+                        }
+                        .sidebar-title{
+                            padding-bottom: 20px;
+                            h4{
+                                display: inline;
+                                float: left;
+                                font-size: 18px;
+                                color: $dark-grey;
+                                font-family: NunitoBold;
+                            }
+                            p{
+                                span{
+                                    display: inline;
+                                    float: right;
+                                    font-size: 24px;
+                                    &::before{
+                                        color: $grey;
+                                    }
+                                }
+                            }
+                        }
+                        .sidebar-desc{
+                            &.desc.price{}
+                            &.desc-brand,
+                            &.desc-cube{
+                                ul{
+                                    height: 290px;
+                                    overflow-y: auto;
+                                    li{
+                                        padding-bottom: 20px;
+                                        position: relative;
+                                        &:last-child{
+                                            padding-bottom: 0;
+                                        }
+                                        input[type="checkbox"]{
+                                            margin-right: 10px;
+                                            -webkit-appearance: none;
+                                            position: absolute;
+                                            top: 2px;
+                                            height: 20px;
+                                            width: 20px;
+                                            border-radius: 2px;
+                                            border: 1px solid black;
+                                            cursor: pointer;
+                                            &:checked{
+                                                background: url('../../src/images/icons/check-mark.svg');
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                background-size: 10px;
+                                                text-decoration: none;
+                                                outline: none;
+                                                outline-offset: 0;
+                                            }
+                                            &:focus{
+                                                outline: none;
+                                            }
+                                        }
+                                        label{
+                                            padding-left: 35px;
+                                            line-height: 1.2;
+                                            @media (max-width: 991px){
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                    scrollbar-width: 15px;
+                                    scrollbar-color: $scroll $scroll-bg; 
+                                    &::-webkit-scrollbar {
+                                        width: 15px;
+                                        background: $scroll-bg;
+                                    }
+                                    &::-webkit-scrollbar-button  {
+                                        display: none;
+                                    }
+                                    &::-webkit-scrollbar-thumb {
+                                        background: $scroll;
+                                    }
+                                    &::-webkit-scrollbar-track-piece{
+                                        background: $scroll-bg;
+                                        border: 0;
+                                    }
+                                }
+                            }
+                            &.desc-brand{
+                                ul{
+                                    
+                                }
+                            }
+                        }
+
+                        &.price{}
+                        &.brand{}
+                        &.cube{}
+                    }
+                }
+            }
+            .category-product{
+                .container-help{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .category-card{
+                    padding: 0 0 0 30px;
+                    margin-bottom: 30px;
+                    a{
+                        position: relative;
+                        display: block;
+                        height: 100%;
+                        &:hover{
+                            .category-card-inner{
+                                box-shadow: 0 3px 35px $shadow-active;
+                                .category-info{
+                                    border-top: 1px solid $purple;
+                                }
+                            }
+                        }
+                        .category-card-inner{
+                            height: 100%;
+                            box-shadow: 0 3px 10px $shadow;
+                            border-radius: 15px;
+                            transition: all 0.3s ease-in-out 0s;
+                            figure{
+                                position: relative;
+                                padding: 16px 24px 0;
+                                img{
+                                    width: 100%;
+                                }
+                                
+                            }
+                            .category-action{
+                                position: absolute;
+                                display: block;
+                                right: 8px;
+                                top: 8px;
+                                p{
+                                    border-radius: 50%;
+                                    width: 42px;
+                                    height: 42px;
+                                    font-size: 14px;
+                                    color: $white;
+                                    position: relative;
+                                    span{
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                    &.action-new{
+                                        margin-bottom: 8px;
+                                        background: $purple;
+                                        z-index: 1;
+                                    }
+                                    &.action-percent{
+                                        background: $blue;
+                                        z-index: 1;
+                                    }
+                                }
+                            }
+                            .category-info{
+                                padding: 20px 24px;
+                                border-top: 1px solid $card-border;
+                                transition: all 0.3s ease-in-out 0s;
+                                .category-title{
+                                    h3{
+                                        font-size: 14px;
+                                        line-height: 1.5;
+                                        color: $grey;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                        width: calc(100% - 24px);
+                                        float: left;
+                                        margin: 0;
+
+                                    }
+                                    p{
+                                        width: 24px;
+                                        float: right;
+                                        
+                                        span{
+                                            font-size: 21px;
+                                        }
+                                    }
+                                }
+                                .category-name{
+                                    min-height: 57px;
+                                    margin-top: 8px;
+                                    h2{
+                                        color: $dark-grey;
+                                        font-size: 16px;
+                                        margin: 0;
+                                        font-family: NunitoBold;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;
+                                    }
+                                }
+                                .category-pricing{
+                                    color: $dark-grey;
+                                    font-size: 24px;
+                                    font-family: NunitoExtraBold;
+                                    margin-top: 16px;
+                                    &.pricing-action{
+                                        color: $purple;
+                                    }
+                                    span{
+                                        color: $dark-grey;
+                                        font-size: 16px;
+                                        padding-left: 10px;
+                                        text-decoration: line-through;
+                                        font-family: NunitoExtraBold;
+                                    }
+                                    @media (max-width: 991px){
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 767px){
+                        padding: 0;
+                    }
+                }
             }
         }
     }
