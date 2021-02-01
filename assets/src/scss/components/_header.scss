@@ -7,17 +7,19 @@
                 img{
                     max-height: 48px;
                     width: auto;
+                    
+                }
+                @media (max-width: 767px){
+                    margin: 0 auto;
+                    width: max-content;
+                    display: block;
                 }
             }
         }
         .header-txt{
             .header-txt-box{
                 float: right;
-                // position: absolute;
-                // display: block;
-                // right: 15px;
-                // top: 50%;
-                // transform: translate(0, -50%);
+                
                 .header-txt-lf{
                     margin-right: 30px;
                     float: left;
@@ -38,6 +40,12 @@
                         &:focus{
                             opacity: 0.9;
                         }
+                    }
+                    @media (max-width: 767px){
+                        width: max-content;
+                        float: none;
+                        margin: 0 auto 10px;
+                    
                     }
                 }
                 .header-txt-rh{
@@ -79,8 +87,22 @@
                             font-family: NunitoBold;
                         }
                     }
+                    @media (max-width: 767px){
+                        width: max-content;
+                        margin: 0 auto;
+                        float: none;
+                    }
+                }
+                @media (max-width: 767px){
+                    float: none;
+                    width: max-content;
+                    margin: 0 auto;
+                    display: block!important;
                 }
             }
+        }
+        @media (max-width: 767px){
+            padding-bottom: 5px;
         }
     }
     .header-bottom{
@@ -88,7 +110,15 @@
             .header-navigation-box{
                 nav{
                     padding: 0;
-                    .navbar-toggler{}
+                    .navbar-toggler{
+                        border: none;
+                        padding: 5px 0 5px;
+                        &:focus{
+                            outline: none;
+                            border: none;
+                            text-decoration: none;
+                        }
+                    }
                     .navbar-collapse{
                         .nav-item{
                             .nav-link{
@@ -96,6 +126,9 @@
                                 line-height: 1.4;
                                 padding: 0;
                                 margin: 12px 48px 12px 0;
+                                @media (max-width: 991px){
+                                    margin: 5px 0;
+                                }
                             }
                         }
                     }

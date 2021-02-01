@@ -5,6 +5,10 @@
             .footer-column{
                 .footer-logo{
                     margin-bottom: 30px;
+                    @media (max-width: 576px){
+                        margin: 0 auto 30px;
+                        display: block;
+                    }
                 }
                 h3{
                     padding-top: 21px;
@@ -13,15 +17,25 @@
                     font-size: 18px;
                     line-height: 1.5;
                     font-family: NunitoBold;
+                    @media (max-width: 576px){
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
                 }
                 .footer-txt,
                 .footer-link{
                     color: $text-footer;
-                    float: left;
-                    width: 100%;
+                    max-width: max-content;
+                    display: block;                
                     margin-bottom: 15px;
                     &:last-child{
                         margin-bottom: 0;
+                        @media (max-width: 576px){
+                            margin-bottom: 20px;
+                        }
+                    }
+                    @media (max-width: 576px){
+                        margin: 0 auto 5px;
                     }
                 }
                 .footer-link{
@@ -33,16 +47,30 @@
                 }
                 .footer-social{
                     margin-bottom: 16px;
-                    float: left;
-                    width: 100%;
-                    &:hover,
-                    &:focus{
-                        svg{
-                            fill: #fff!important;
-                            path{
-                                fill: #fff;
+                    max-width: max-content;
+                    display: block;
+                    p{
+                        span{
+                            font-size: 24px;
+                            &:hover,
+                            &:focus{
+                                &::before{
+                                    color: $white;
+                                }
                             }
                         }
+                    }
+                    @media (max-width: 576px){
+                        float: left;
+                        width: max-content;
+                        margin: 0 10px;
+                    }
+                }
+                &.social-column{
+                    @media (max-width: 576px){
+                        text-align: center;
+                        max-width: max-content;
+                        margin: 0 auto;
                     }
                 }
             }
@@ -69,7 +97,7 @@
             bottom: 56px;
             border-radius: 50%;
             padding: 12px;
-            background: $scroll-bg;
+            background: $blue;
         }
     }
 }
