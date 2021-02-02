@@ -19,12 +19,15 @@
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="assets/dist/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/dist/js/jquery-ui-1.11.4.custom/jquery-ui.min.css"></link>
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="assets/dist/css/main.css">
 
         <!-- jQuery and Bootstrap js -->
         <script src="assets/dist/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="assets/dist/js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script src="assets/dist/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
         <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
         
     </head>
@@ -152,13 +155,18 @@
                                         <p><span class="icon-arrow-up"></span></p>
                                     </div>
                                     <div class="sidebar-desc desc-price">
-                                        <div data-role="rangeslider">
-                                            <label for="price-min">Price:</label>
-                                            <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-                                            <label for="price-max">Price:</label>
-                                            <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-                                          </div>
-                                        <p>Cena : <span>$25</span>-<span>$220</span></p>
+                                        <div class="sidebar-range-slider">
+                                            <div class="selector">
+                                                <div class="price-slider">
+                                                    <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                                        <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                    </div>
+                                                    <p>Cena: <span id="min-price" data-currency="$" class="slider-price">25</span> <span class="seperator"></span> - <span id="max-price" data-currency="$" data-max="220"  class="slider-price">220</span></p>
+                                                     
+                                                </div> 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="sidebar-box brand">
